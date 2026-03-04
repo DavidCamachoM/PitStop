@@ -16,7 +16,7 @@ El proyecto busca transmitir la velocidad y la precisión de los Pits de Fórmul
 
 ##  Estructura del Proyecto
 ```text
-PITSTOP-85/
+PitStop/
 ├─ index.html          # Parrilla de salida (Landing principal)
 ├─ menu.html           # La carta (Próximamente nuevos platos)
 ├─ experiencia.html    # Galería e inmersión visual

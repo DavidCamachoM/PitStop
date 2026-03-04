@@ -1,4 +1,4 @@
-# 🏎️ PITSTOP 85 | Gastro-Experience
+#  PITSTOP 85 | Gastro-Experience
 
 Landing page de alto rendimiento diseñada para un restaurante temático de automovilismo. Este proyecto combina una estética "racing" con una interfaz moderna, fluida y visualmente impactante.
 

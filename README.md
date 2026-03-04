@@ -21,6 +21,6 @@ PitStop/
 ├─ menu.html           # La carta (Próximamente nuevos platos)
 ├─ experiencia.html    # Galería e inmersión visual
 ├─ reservar.html       # Box de reserva (Formulario interactivo)
-├─ styles.css          # El "motor" (Estilos globales y animaciones)
+├─ styles.css          # Clean y moderno como un monoplaza
 └─ src/
    └─ imagenes/        # Assets y telemetría visual (Platos y fondos)

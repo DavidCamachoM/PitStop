@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PITSTOP 85</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar animate-slide-down">
+        <div class="nav-container">
+            <div class="logo">
+                PITSTOP <span class="text-red">85</span>
+            </div>
+            <nav class="nav-links">
+            <a href="#" class="active">Inicio</a>
+            <a href="menu.html">Menú</a>                
+            <a href="experiencia.html">Experiencia</a>
+            </nav>
+            <a href="reservar.html" class="btn-reserve">Reservar</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <div class="hero-text-area">
+                <h1 class="gradient-text animate-fade-up delay-100";>
+                   Sabor. Velocidad.<br>Experiencia.
+                </h1>
+                <p class="subtitle animate-fade-up delay-200">
+                    Alta gastronomía inspirada en la Fórmula 1.
+                </p>
+                
+                <div class="btn-group animate-fade-up delay-300">
+                    <button class="btn-primary" onclick="window.location.href='reservar.html'">Reservar Ahora</button>
+                    <button class="btn-secondary" onclick="window.location.href='menu.html'">Ver Menú</button>
+                </div>
+                
+                <div class="slider-dots animate-fade-up delay-400" id="dots-container">
+                    <div class="dot active" onclick="cambiarPlatoManual(0)"></div>
+                    <div class="dot" onclick="cambiarPlatoManual(1)"></div>
+                    <div class="dot" onclick="cambiarPlatoManual(2)"></div>
+                </div>
+            </div>
+
+            <div class="hero-image-area" style="overflow: visible; width: 100%; position: relative;">
+                <img src="src/Bebidas.png" alt="Plato Pitstop" id="plato-img" class="burger-img animate-slide-right">
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-content animate-fade-up delay-100">
+            <h2 class="title-gold">
+                NO ES COMIDA. ES UNA CARRERA.
+            </h2>
+            <p class="info-text">
+                En PITSTOP 85 cada plato está diseñado como un monoplaza:<br> precisión, equilibrio y potencia.
+            </p>
+            <p class="info-highlight">
+                No servimos comida. Servimos adrenalina.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Inicio</a> <span class="separator">/</span>
+                <a href="menu.html">Menú</a> <span class="separator">/</span>
+                <a href="experiencia.html">Experiencia</a> <span class="separator">/</span>
+                <a href="#">Contacto</a>
+            </div>
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2026 PITSTOP 85. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const platos = [
+            { 
+                src: "src/Bebidas.png", 
+                width: "800px"  
+            },
+            { 
+                src: "src/Hamburguesa.png", 
+                width: "800px" 
+            },
+            { 
+                src: "src/Carnita.png", 
+                width: "800px"  
+            }
+ 
+        ];
+        
+        let indexActual = 0;
+        const imagenDOM = document.getElementById('plato-img');
+        const dots = document.querySelectorAll('.dot');
+        let intervaloCarrusel;
+
+        function cambiarPlato(nuevoIndex) {
+            imagenDOM.classList.remove('animate-slide-right');
+            
+            imagenDOM.style.transform = 'translateX(100vw)';
+            imagenDOM.style.opacity = '0';
+
+            setTimeout(() => {
+                indexActual = nuevoIndex;
+                imagenDOM.src = platos[indexActual].src; 
+                
+                imagenDOM.style.maxWidth = platos[indexActual].width; 
+                
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[indexActual].classList.add('active');
+
+                setTimeout(() => {
+                    imagenDOM.style.transform = 'translateX(0) scale(1)'; 
+                    imagenDOM.style.opacity = '1';
+                }, 100); 
+
+            }, 600); 
+        }
+
+        function siguientePlato() {
+            let next = (indexActual + 1) % platos.length;
+            cambiarPlato(next);
+        }
+
+        function cambiarPlatoManual(index) {
+            clearInterval(intervaloCarrusel); 
+            if (index !== indexActual) {
+                cambiarPlato(index);
+            }
+            iniciarCarrusel(); 
+        }
+
+        function iniciarCarrusel() {
+            intervaloCarrusel = setInterval(siguientePlato, 5000); 
+        }
+
+        iniciarCarrusel();
+        
+        imagenDOM.style.maxWidth = platos[0].width;
+    </script>
+</body>
+</html>

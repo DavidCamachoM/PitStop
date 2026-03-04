@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencia | PITSTOP 85</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="color: inherit; text-decoration: none;">PITSTOP <span class="text-red">85</span></a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="menu.html">Menú</a>
+                <a href="experiencia.html" class="active">Experiencia</a>
+            </nav>
+            <a href="reservar.html" class="btn-reserve">Reservar</a>
+        </div>
+    </header>
+
+    <section class="hero" style="min-height: 60vh; ">]
+        <div class="hero-bg" style="background-image: url('src/FondoHome.png'); opacity: 0.1;"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content" style="grid-template-columns: 1fr; text-align: center; justify-items: center;">
+            <div class="hero-text-area animate-fade-up">
+                <h1 class="gradient-text" style="font-size: 3.5rem;">
+                    BIENVENIDO AL PADDOCK
+                </h1>
+                <p class="subtitle" style="max-width: 600px; margin: 0 auto;">
+                    Diseñado para los amantes de la adrenalina. Cada segundo cuenta, cada detalle importa.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="parallax-wrapper">
+
+        <section class="experience-grid">
+            <div class="max-w-7xl mx-auto">
+                
+                <div class="exp-row animate-fade-up delay-100">
+                    <div class="exp-img-box">
+                        <img src="src/PitLane.png" alt="Pit Lane" class="exp-img">
+                    </div>
+                    <div class="exp-text">
+                        <h2 class="title-gold bloom-text2">EL PIT LANE</h2>
+                        <p class="info-text">Nuestra cocina funciona con la misma sincronización que los mecánicos en una parada de boxes. Cero margen de error, máxima eficiencia y fuego a altas revoluciones para sellar cada corte a la perfección.</p>
+                    </div>
+                </div>
+
+                <div class="exp-row reverse animate-fade-up delay-200">
+                    <div class="exp-text text-right">
+                        <h2 class="title-gold bloom-text">ZONA VIP</h2>
+                        <p class="info-text">Luces de neón, acabados en fibra de carbono y un sistema de sonido que emula el rugido de los motores V8. En Pitstop 85, no eres un cliente, eres el piloto estrella de nuestra escudería.</p>
+                    </div>
+                    <div class="exp-img-box">
+                        <img src="src/ZonaVip.png" alt="Ambiente VIP" class="exp-img">
+                    </div>
+                </div>
+
+                <div class="exp-row animate-fade-up delay-300">
+                    <div class="exp-img-box ">
+                        <img src="src/Pole.png" alt="Detalle" class="exp-img">
+                    </div>
+                    <div class="exp-text">
+                        <h2 class="title-gold bloom-text2">POLE POSITION</h2>
+                        <p class="info-text">Ingredientes seleccionados bajo los estándares más estrictos. Cada hamburguesa está ensamblada para cruzar la línea de meta y coronarse como campeona del sabor en tu paladar.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="cta-section animate-fade-up delay-400">
+            <div class="cta-container" style="text-align: center; padding: 4rem 2rem; border-radius: 15px; background-color: #050505;">
+                <h2 class="gradient-text-small" style="margin-bottom: 1rem;">¿LISTO PARA CORRER?</h2>
+                <p class="info-text" style="margin-bottom: 2rem;">Asegura tu mesa en la parrilla de salida antes de que se agoten.</p>
+                <button class="btn-primary" onclick="window.location.href='reservar.html'">RESERVAR MI LUGAR</button>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Inicio</a> <span class="separator">/</span>
+                <a href="menu.html">Menú</a> <span class="separator">/</span>
+                <a href="experiencia.html">Experiencia</a> <span class="separator">/</span>
+                <a href="#">Contacto</a>
+            </div>
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2026 PITSTOP 85. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

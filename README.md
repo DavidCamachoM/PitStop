@@ -22,5 +22,6 @@ PitStop/
 ├─ experiencia.html    # Galería e inmersión visual
 ├─ reservar.html       # Box de reserva (Formulario interactivo)
 ├─ styles.css          # Clean y moderno como un monoplaza
+├─ script.js           # javascript 
 └─ src/
    └─ imagenes/        # Assets y telemetría visual (Platos y fondos)
